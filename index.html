@@ -13,7 +13,7 @@
   </head>
   <body>
 
-    <div class="jumbotron vertical-center" id="card1"> 
+    <div class="jumbotron vertical-center" id="card1" style="background-color: #F0E8DA"> 
       <div class="container text-center">
         <h1>Hello, I am <br>
           <span class="typer" id="main" data-words="Cullen Steber, Student at UAB,🇺🇸, Photographer, not a doctor" data-delay="100" data-deleteDelay="1000"></span>
@@ -24,34 +24,41 @@
         <a href="https://www.instagram.com/cullensteber/"><i class="fab fa-instagram" id="button" style="font-size: 30px; padding: 20px; color: black;"></i></a>
         <a href="mailto:cullensteber@gmail.com"><i class="fas fa-envelope" id="button"style="font-size: 30px; padding: 20px; color: black;"></i></a>
         <a href="https://vsco.co/cullensphoto/images/1"><i class="fas fa-camera" id="button" style="font-size: 30px; padding: 20px; color: black;"></i></a>
-        <br><br><br><br>
-        <a href="#card2"><i class="fas fa-angle-down" id="downarrow" style="font-size: 50px; color: rgb(10,24,38);"></i></a>
+        <br><br>
+        <div class="container text-center" id="hiddendivcontent" style="display: none;">
+          <p>going to put something really cool here one day...</p>
+        </div>
+        <br><br>
+        <a href="#expand"><i class="fas fa-angle-down" id="hideshowdiv" style="font-size: 50px; color: rgb(10,24,38);"></i></a>
         <br><br><br>
         <p id="footer" style="font-size: 10px;"> &copy; Cullen Steber 2020</p>
         </div>
       </div>
     </div>
 
-    <div class="jumbotron vertical-center" style="background-color: black;" id="card2"> 
-      <div class="container text-center">
-        <h1 style="color: white;">Current: Student at University of Alabama at Birmingham</h1>
-        <h2 style="color:grey">Doing: Computer Science with minor in Business Administration</h2>
-        <h2 style="color:white">Getting into: Full stack web development, Swift/iOS Development, python</h2>
-        <h2 style="color:grey">Still doing: Java, HTML/CSS/JS, Photography/Photoshop</h2>
-        <h2 style="color:white">Using: Git, Virtualbox, Vagrant, anaconda, Flask, node, Ubuntu, MacOS</h2>
-        <br>
-        <a href="#card3"><i class="fas fa-angle-down" style="font-size: 50px; color: red;"></i></a>
-      </div>
-    </div>
+   <script type="text/javascript">
+      var button = document.getElementById('hideshowdiv');
+      button.onclick = function() {
+      var div = document.getElementById('hiddendivcontent');
+        if (div.style.display !== 'none') {
+          div.style.display = 'none';
+          button.setAttribute("class", "fas fa-angle-down");
+        }
+        else {
+          div.style.display = 'block';
+          button.setAttribute("class", "fas fa-angle-up");
+        }
+      };
+   </script>
 
-     <div class="jumbotron vertical-center" style="background-image: url(bg.jpg);" id="card3"> 
-      
-      <h4 style="color: white;">/* remember to put something here eventually */</h4>
+   <script type="text/javascript">
+     function darkMode {
+        document.body.style.background = black;
+     }
 
-      </div>
-    </div>
+   </script>
 
-    <!-- jQuery -->
+    <!-- jQuery google -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
     <!-- Latest compiled and minified JavaScript -->
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
