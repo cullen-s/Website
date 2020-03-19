@@ -40,12 +40,14 @@ html, body {
   color: rgb(10,24,38);
 }
 
-#hiddendivcontent {
-
+#powerbutton {
+  width: 100px;
+  height: auto;
 }
 
-#hideshowdiv:active {
-
+#powerbutton:hover {
+  transform: scale(1.1);
+  transition-duration: 2s;
 }
 
 #button {
